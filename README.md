@@ -14,6 +14,12 @@ After **cleaning, preprocessing, and feature engineering**, the processed datase
 
 ---
 
+## 📥 Data Source
+
+The original dataset is publicly available at [Figshare: Credit Card Dataset](https://figshare.com/articles/dataset/creditcard_Dataset/29270873?file=55234994).
+
+---
+
 ## ⚙️ Data Preprocessing
 
 Steps performed:
@@ -37,28 +43,20 @@ Boxplots help detect outliers and feature spread.
 
 ![Boxplots](box.png)
 
----
-
 ### 2️⃣ Histograms & Feature Distributions
 Feature distributions after scaling.
 
 ![Feature Charts](charts.png)
-
----
 
 ### 3️⃣ Correlation Heatmap
 Shows relationships between features and the `Class` label.
 
 ![Heatmap](heatmap.png)
 
----
-
 ### 4️⃣ Scatterplot
 Scatterplot demonstrates patterns between two features (`V2` vs `V4`).
 
 ![Scatterplot](scatterplot.png)
-
----
 
 ### 5️⃣ Class Distribution
 The dataset is **highly imbalanced** — frauds are much fewer than normal transactions.
@@ -80,6 +78,13 @@ The three baseline models were trained on the **final training set** and evaluat
 > **Note:** The dataset is highly imbalanced, so metrics like **Recall and F1-score** are more important than Accuracy for fraud detection.
 
 ---
+
+## 🧩 Next Steps
+
+1. Handle **class imbalance** (SMOTE or undersampling).  
+2. Train more advanced models: XGBoost, LightGBM.  
+3. Evaluate using **Precision, Recall, F1-score, ROC-AUC**.  
+4. Deploy the trained model via Flask or Streamlit dashboard.
 
 ---
 
