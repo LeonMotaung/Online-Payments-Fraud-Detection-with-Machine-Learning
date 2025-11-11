@@ -1,29 +1,80 @@
 # 💳 Online Payments Fraud Detection with Machine Learning
 
 **Author:** Leon Motaung  
-**Company:** DeWet Technologies  
 **Environment:** Python, Pandas, NumPy, Scikit-learn, Matplotlib, Seaborn, Plotly  
 
 ---
 
 ## 🧠 Project Overview
 
-This project aims to detect **fraudulent online payment transactions** using **machine learning** techniques.  
-The dataset (`creditcard.csv`) contains over **284,000 transactions** with 30 anonymized features (`V1–V28`), along with `Amount`, `Time`, and `Class` (fraud or normal).
+This project detects **fraudulent online payment transactions** using **machine learning**.  
+The dataset contains **284,808 transactions** with 30 features (`V1–V28`), plus `Amount`, `Time`, and `Class` (fraud = 1, normal = 0).
 
-After thorough **data cleaning**, **visualization**, and **feature engineering**, the processed dataset is saved as `creditcard_final.csv`.
+After **cleaning, preprocessing, and feature engineering**, the processed dataset is saved as `creditcard_final.csv`.
 
 ---
 
 ## ⚙️ Data Preprocessing
 
-Key preprocessing steps performed:
+Steps performed:
 
-- ✅ **Handled Missing Values** – removed or filled nulls  
-- ✅ **Converted Data Types** – ensured numerical consistency  
-- ✅ **Scaled Features** – normalized `Amount` and `Time` using `RobustScaler`  
-- ✅ **Removed Outliers** – using IQR method  
-- ✅ **Saved Clean Dataset** – exported as `creditcard_final.csv`  
+- ✅ Handled missing values  
+- ✅ Corrected data types  
+- ✅ Encoded categorical variables (none present in this dataset)  
+- ✅ Scaled features (`Amount` and `Time`)  
+- ✅ Removed outliers using IQR  
+- ✅ Added feature: log-transformed `scaled_amount`  
+- ✅ Saved cleaned dataset as `creditcard_final.csv`  
 
-```python
-data.to_csv("creditcard_final.csv", index=False)
+---
+
+## 📊 Data Visualization
+
+The visual exploration shows **class imbalance, feature distributions, and correlations**.
+
+### 1️⃣ Boxplots
+Boxplots help detect outliers and feature spread.
+
+![Boxplots](box.png)
+
+---
+
+### 2️⃣ Histograms & Feature Distributions
+Feature distributions after scaling.
+
+![Feature Charts](charts.png)
+
+---
+
+### 3️⃣ Correlation Heatmap
+Shows relationships between features and the `Class` label.
+
+![Heatmap](heatmap.png)
+
+---
+
+### 4️⃣ Scatterplot
+Scatterplot demonstrates patterns between two features (`V2` vs `V4`).
+
+![Scatterplot](scatterplot.png)
+
+---
+
+### 5️⃣ Class Distribution
+The dataset is **highly imbalanced** — frauds are much fewer than normal transactions.
+
+*Bar chart can be added similarly as `bar_chart.png` if available.*
+
+---
+
+## 🧩 Next Steps
+
+1. Handle **class imbalance** (SMOTE or undersampling).  
+2. Train models: Logistic Regression, Random Forest, XGBoost, LightGBM.  
+3. Evaluate with metrics suited for imbalanced datasets: Precision, Recall, F1-score, ROC-AUC.  
+4. Deploy model via Flask or Streamlit dashboard.
+
+---
+
+## 📁 Project Structure
+
