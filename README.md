@@ -63,16 +63,30 @@ Scatterplot demonstrates patterns between two features (`V2` vs `V4`).
 ### 5️⃣ Class Distribution
 The dataset is **highly imbalanced** — frauds are much fewer than normal transactions.
 
-*Bar chart can be added similarly as `bar_chart.png` if available.*
+![Class Distribution](bar_chart.png)
+
+---
+
+## 🧩 Baseline Models Evaluation
+
+The three baseline models were trained on the **final training set** and evaluated on the **validation set**.  
+
+| Model                  | Accuracy     | Precision   | Recall     | F1-score   | Notes |
+|------------------------|------------|------------|-----------|-----------|-------|
+| Logistic Regression     | 0.9768     | 0.0577     | 0.8929    | 0.1083    | Simple, interpretable, baseline model |
+| Decision Tree           | 0.9993     | 0.8478     | 0.6964    | 0.7647    | Visualize rules, understand feature importance |
+| K-Nearest Neighbors (KNN)| 0.9995     | 0.9744     | 0.6786    | 0.8000    | Works on small datasets, pattern recognition |
+
+> **Note:** The dataset is highly imbalanced, so metrics like **Recall and F1-score** are more important than Accuracy for fraud detection.
 
 ---
 
 ## 🧩 Next Steps
 
 1. Handle **class imbalance** (SMOTE or undersampling).  
-2. Train models: Logistic Regression, Random Forest, XGBoost, LightGBM.  
-3. Evaluate with metrics suited for imbalanced datasets: Precision, Recall, F1-score, ROC-AUC.  
-4. Deploy model via Flask or Streamlit dashboard.
+2. Train more advanced models: XGBoost, LightGBM.  
+3. Evaluate using **Precision, Recall, F1-score, ROC-AUC**.  
+4. Deploy the trained model via Flask or Streamlit dashboard.
 
 ---
 
