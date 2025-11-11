@@ -81,13 +81,6 @@ The three baseline models were trained on the **final training set** and evaluat
 
 ---
 
-## 🧩 Next Steps
-
-1. Handle **class imbalance** (SMOTE or undersampling).  
-2. Train more advanced models: XGBoost, LightGBM.  
-3. Evaluate using **Precision, Recall, F1-score, ROC-AUC**.  
-4. Deploy the trained model via Flask or Streamlit dashboard.
-
 ---
 
 ## 📁 Project Structure
